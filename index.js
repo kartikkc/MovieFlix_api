@@ -21,7 +21,7 @@ app.get("/movieflix", async (req, res) => {
     try {
         const search = req.query.s || "The%20Proposal";
         // let movies = [];
-        const response = await axios.get("http://www.omdbapi.com/?i=tt3896198&apikey=371aaeec&s=" + search);
+        const response = await axios.get(url+"&s=" + search);
         // console.log();
         res.send(response.data);
     }
